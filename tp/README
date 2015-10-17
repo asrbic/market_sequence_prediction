@@ -1,0 +1,4 @@
+To build the temporal pooler run:
+make tp
+
+Or make {dsp, sp, lsp} for three different versions of the spatial pooler.  
