@@ -61,6 +61,14 @@ void destroyTP(temporalPooler* tp)
 	free(tp->learningCells);
 }
 
+//********CONVENIENCE FUNCTIONS****************
+void runIteration(temporalPooler* tp)
+{
+	calcActiveState(tp, 0);
+	calcPredictiveState(tp,0);
+	learn(tp,0);
+}
+
 //*************CORE FUNCTIONS****************************
 
 //calculates the active and learn states cells for each column

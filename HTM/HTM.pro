@@ -14,9 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    tp.c
+    tp.c \
+    graphics.c \
+    htmwidget.cpp \
+    btf.cpp
 
 HEADERS  += mainwindow.h \
-    tp.h
+    tp.h \
+    graphics.h \
+    htmwidget.h \
+    btf.h
 
 FORMS    += mainwindow.ui
+
+LIBS += -lboost_system -lboost_filesystem

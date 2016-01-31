@@ -93,6 +93,8 @@ int getBestMatchingSegment(cell* tempCell, int timeIndex);
 void addSegmentActiveSynapses(temporalPooler* tp, cell* tempCell, int segIndex, int timeIndex, char newSynapses, char sequenceSegment);
 void adaptSegments(cell* tempCell, char positiveReinforcement);
 
+void runIteration(temporalPooler* tp);
+
 void calcActiveState(temporalPooler* tp, int CPUCoreOffset);
 void calcPredictiveState(temporalPooler* tp, int CPUCoreOffset);
 void learn(temporalPooler* tp, int CPUCoreOffset);
