@@ -9,7 +9,7 @@ CC = gcc
 TARGET = tp
 VPATH = source
 
-_OBJS = main.o tp.o sema.o graphics.o
+_OBJS = sema.o graphics.o tp.o main.o 
 OBJDIR =  ./
 
 # Optional to build examples
@@ -29,21 +29,13 @@ all: $(TARGET)
 .SUFFIXES: .c .o
 
 $(OBJDIR)/%.o: %.c
-	$(CC) $< -c -o $@ $(FLAGS) $(INCLUDE)
+	$(CC) $< -c -o $@ $(FLAGS) $(LIBS) $(INCLUDE)
 	@echo
 	
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $(FLAGS) $(OBJS) $(INCLUDE) $(LIB_PATH) $(LIBS) $(XLIBS)
 	@echo
 
-dsp: DefinitiveSpatial.c
-	gcc -std=gnu99 -lm -o ./dsp ./source/DefinitiveSpatial.c
-	
-sp: spatial_v12.c
-	gcc -std=gnu99 -lm -o ./sp ./source/spatial_v12.c
-	
-lsp: spatial_0.3.4.c
-	gcc -std=gnu99 -lm -mcmodel=large -o ./lsp ./source/spatial_0.3.4.c
 clean:
 	$(RM) $(OBJS)
 	$(RM) $(TARGET)

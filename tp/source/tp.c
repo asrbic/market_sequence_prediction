@@ -387,8 +387,8 @@ void adaptSegments(cell* tempCell, char positiveReinforcement)
 				{
 					if(positiveReinforcement)
 						tempSynapse->perm-=permDec;					
-					else
-						tempSynapse->perm+=permInc;	
+					//else
+					//	tempSynapse->perm+=permInc;	
 				}
 			
 			}

@@ -33,7 +33,8 @@ int main()
 	temporalPooler tp;
 	initTP(&tp,sideSize,sideSize,input,1);
 	//fprintf(stdout,"codes file will not be read - modoify main!\n");
-	initTPgfxData(&data, input, &tp, colPixelSize, 2,"/home/meecham/Desktop/thesis_data/img/","/media/Data/datasets/KTH_Source/training_data/colCodes_wang_s0_100x20K_randTranches.bin");
+	//initTPgfxData(&data, input, &tp, colPixelSize, 2,"/home/meecham/Desktop/thesis_data/img/","/media/Data/datasets/KTH_Source/training_data/colCodes_wang_s0_100x20K_randTranches.bin");
+	initTPgfxData(&data, input, &tp, colPixelSize, 2,NULL,NULL);
 	int eventResult;
 	render(&data);
 	
