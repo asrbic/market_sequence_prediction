@@ -25,5 +25,9 @@
         status="integration">
 	</info>
 	<dependency org="org.apache.commons" name="commons-csv" rev="+" />
-  	<dependency org="org.deeplearning4j" name="deeplearning4j-core" rev="0.4-rc3.4" />
+  	<dependency org="org.deeplearning4j" name="deeplearning4j-core" rev="0.4.0" />
+  	<dependency org="org.nd4j" name="canova-nd4j" rev="0.0.0.17" />
+  	<dependency org="ws.wamp.jawampa" name="jawampa-core" rev="0.4.1" />
+  	  	<dependency org="ws.wamp.jawampa" name="jawampa-netty" rev="0.4.1" />
+  	
 </ivy-module>
